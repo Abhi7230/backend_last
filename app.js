@@ -23,7 +23,7 @@ const port = 2999;
 connectDB();
 
 const corsOptions = {
-    origin: 'https://frontend-last-tau.vercel.app/', 
+    origin: 'https://frontend-last-tau.vercel.app', 
     credentials: true, 
 };
 
