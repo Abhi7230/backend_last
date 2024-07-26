@@ -26,6 +26,13 @@ const corsOptions = {
     origin: 'https://frontend-last-tau.vercel.app', 
     credentials: true, 
 };
+// On the server
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://frontend-last-tau.vercel.app");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions));
