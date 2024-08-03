@@ -1,5 +1,3 @@
-// models/Problems.js
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -40,21 +38,16 @@ const ProblemSchema = new Schema({
   },
   submissions:{
     type: Number,
-    default:0
+    default: 0
   },
-  succesful:{
-    type:Number,
-    default:0
+  successful:{
+    type: Number,
+    default: 0
   },
-  hints: [{
-    hints: {
-      type: String,
-      required: true
-    }
-  }],
+  hints: [String],  // Changed this line to match array of strings
   topics: [{
-      type:String,
-       required: true
+    type: String,
+    required: true
   }],
   locked_test_cases: [{
     input: {
