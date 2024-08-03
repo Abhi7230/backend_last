@@ -398,7 +398,7 @@ app.post('/addproblem', async (req, res) => {
 
   app.get('/api/problems', async (req, res) => {
     try {
-      const problems = await Problem.find({}, 'title submissions succesful level topics');
+      const problems = await Problem.find({}, 'title submissions succesfull level topics');
       res.json(problems);
     } catch (error) {
       res.status(500).json({ message: 'Error fetching problems', error: error.message });
